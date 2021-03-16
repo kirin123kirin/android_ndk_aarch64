@@ -1,5 +1,5 @@
-#FROM arm64v8/python:3.8-slim
-FROM python:3.8-slim
+FROM arm64v8/python:3.8-slim
+#FROM python:3.8-slim
 
 ENV ANDROID_NDK_VERSION=r22
 ENV ANDROIDZIPFILE=android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
@@ -14,8 +14,8 @@ RUN apt-get update \
         xz-utils \
         git-core \
         libpython2.7-stdlib \
-#        libc6-dev
-        libc6-dev-arm64-cross
+        libc6-dev
+#        libc6-dev-arm64-cross
 
 WORKDIR /root
 COPY startup.sh .bash_profile
