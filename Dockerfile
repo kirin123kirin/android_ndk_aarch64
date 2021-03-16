@@ -11,9 +11,9 @@ RUN apt-get update \
         vim \
         unzip \
         xz-utils \
-        git-core \
-        libpython2.7-stdlib \
-        libc6-dev
+RUN apt-get install -y --no-install-recommends git-core \
+RUN apt-get install -y --no-install-recommends libpython2.7-stdlib \
+RUN apt-get install -y --no-install-recommends libc6-dev
 #        libc6-dev-arm64-cross
 
 WORKDIR /root
