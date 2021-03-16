@@ -10,7 +10,7 @@ RUN apt-get update \
         curl \
         vim \
         unzip \
-        xz-utils \
+        xz-utils
 RUN apt-get install -y --no-install-recommends git-core \
 RUN apt-get install -y --no-install-recommends libpython2.7-stdlib \
 RUN apt-get install -y --no-install-recommends libc6-dev
