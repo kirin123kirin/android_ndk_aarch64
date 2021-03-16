@@ -1,20 +1,21 @@
-FROM arm64v8/python:3.8-slim
+#FROM arm64v8/python:3.8-slim
+FROM python:3.8-slim
 
 ENV ANDROID_NDK_VERSION=r22
 ENV ANDROIDZIPFILE=android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
 ENV ANDROID_API_VERSION=24
 ENV HOST_ARCH=aarch64-linux-android
 
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends
-RUN apt-get install -y curl
-RUN apt-get install -y vim
-RUN apt-get install -y unzip
-RUN apt-get install -y xz-utils
-RUN apt-get install -y --no-install-recommends git-core
-RUN apt-get install -y --no-install-recommends libpython2.7-stdlib
-RUN apt-get install -y --no-install-recommends libc6-dev
-#        libc6-dev-arm64-cross
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        curl \
+        vim \
+        unzip \
+        xz-utils \
+        git-core \
+        libpython2.7-stdlib \
+#        libc6-dev
+        libc6-dev-arm64-cross
 
 WORKDIR /root
 COPY startup.sh .bash_profile
