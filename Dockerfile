@@ -5,12 +5,12 @@ ENV ANDROIDZIPFILE=android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
 ENV ANDROID_API_VERSION=24
 ENV HOST_ARCH=aarch64-linux-android
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        curl \
-        vim \
-        unzip \
-        xz-utils
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends
+RUN apt-get install -y curl
+RUN apt-get install -y vim
+RUN apt-get install -y unzip
+RUN apt-get install -y xz-utils
 RUN apt-get install -y --no-install-recommends git-core \
 RUN apt-get install -y --no-install-recommends libpython2.7-stdlib \
 RUN apt-get install -y --no-install-recommends libc6-dev
