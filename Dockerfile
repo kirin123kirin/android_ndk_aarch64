@@ -1,5 +1,5 @@
-FROM arm64v8/python:3.8-slim
-#FROM python:3.8-slim
+#FROM arm64v8/python:3.8-slim
+FROM python:3.8-slim
 
 ENV ANDROID_NDK_VERSION=r22
 ENV ANDROIDZIPFILE=android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
