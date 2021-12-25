@@ -4,7 +4,8 @@ FROM python:3.9-slim
 ENV ANDROID_NDK_VERSION=r22
 ENV ANDROIDZIPFILE=android-ndk-${ANDROID_NDK_VERSION}-linux-x86_64.zip
 ENV ANDROID_API_VERSION=24
-ENV HOST_ARCH=aarch64-linux-android
+#ENV HOST_ARCH=aarch64-linux-android
+HOST_ARCH=x86_64
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
